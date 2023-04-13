@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="main.js"></script>
+</head>
+<body>
+<h1>
+  В этом приложении будет предложено ознакомиться с автопроизводителями и их модельным рядом. <br> А так же изменить их свойства.
+</h1>
+<div id="car-make-list">
+    <div th:each="carMakeName : ${carMake}">
+      <a href="#" class="car-make" th:attr="data-id=${carMakeName.id}" th:text="${carMakeName.make}"></a>
+    </div>
+</div>
+
+</body>
+</html>
